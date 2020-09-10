@@ -1,0 +1,17 @@
+---
+title: "presentationweb"
+author: "Sandra Rairán"
+date: "9/07/2020"
+output: ioslides_presentation
+---
+
+
+```{r cars, include=FALSE, warning=FALSE}
+library(plotly)
+```
+
+## R Markdown Presentation & Plotly
+```{r scatterplot,echo=FALSE,warning=FALSE, fig.width=5, fig.height=4, fig.align='center',fig.cap='diamonds'}
+plot_ly(diamonds, x = ~price, y = ~carat, type = "scatter",
+color = ~cut, mode = 'markers', size = ~price)
+```
